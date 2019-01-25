@@ -1,0 +1,8 @@
+# Bash
+- TagList：https://www.vim.org/script.php?script_id=273​
+- NERDTree：https://github.com/scrooloose/nerdtree​
+
+# Zsh
+- autojump
+- zsh-syntax-highlighting
+- zsh-autosuggestions
