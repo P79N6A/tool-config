@@ -103,4 +103,23 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cp="cp -i"
-alias ls="ls --color=auto"
+alias ll="ls -alh --color=auto"
+alias clearer="printf "\033c""
+
+# get current host related info
+ii () {
+    echo -e "\nYou are logged on ${red}$HOST"
+    echo -e "\nAdditionnal information:$NC " ; uname -a
+    echo -e "\n${red}Users logged on:$NC " ; w -h
+    echo -e "\n${red}Current date :$NC " ; date
+    echo -e "\n${red}Machine stats :$NC " ; uptime
+    echo -e "\n${red}Memory stats :$NC " ; free
+    echo -en "\n${red}Local IP Address :$NC" ; /sbin/ifconfig wlan0 | awk /'inet addr/ {print $2}' | sed -e s/addr:/' '/ 
+    #my_ip 2>&. ;
+    #my_ip 2>&1 ;
+    #echo -e "\n${RED}Local IP Address :$NC" ; echo ${MY_IP:."Not connected"}
+    #echo -e "\n${RED}ISP Address :$NC" ; echo ${MY_ISP:."Not connected"}
+    #echo -e "\n${RED}Local IP Address :$NC" ; echo ${MY_IP} #:."Not connected"}
+    #echo -e "\n${RED}ISP Address :$NC" ; echo ${MY_ISP} #:."Not connected"}
+    echo
+}
