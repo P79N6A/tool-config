@@ -105,6 +105,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 alias cp="cp -i"
 alias ll="ls -alh --color=auto"
 alias clearer="printf "\033c""
+alias hsg='history | grep'
 
 # get current host related info
 ii () {
@@ -122,4 +123,9 @@ ii () {
     #echo -e "\n${RED}Local IP Address :$NC" ; echo ${MY_IP} #:."Not connected"}
     #echo -e "\n${RED}ISP Address :$NC" ; echo ${MY_ISP} #:."Not connected"}
     echo
+}
+
+# mkdir and cd
+mkcd() {
+    mkdir -p $1; cd $1
 }
