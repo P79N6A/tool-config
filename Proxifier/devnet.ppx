@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxifierProfile version="101" platform="Windows" product_id="0" product_minver="310">
+  <Options>
+    <Resolve>
+      <AutoModeDetection enabled="true" />
+      <ViaProxy enabled="false">
+        <TryLocalDnsFirst enabled="false" />
+      </ViaProxy>
+      <ExclusionList>localhost;%SimpleHostnames%;%ComputerName%;*.local;
+</ExclusionList>
+    </Resolve>
+    <Encryption mode="disabled" />
+    <HttpProxiesSupport enabled="false" />
+    <HandleDirectConnections enabled="false" />
+    <ConnectionLoopDetection enabled="true" />
+    <ProcessServices enabled="false" />
+    <ProcessOtherUsers enabled="false" />
+  </Options>
+  <ProxyList>
+    <Proxy id="100" type="HTTPS">
+      <Address>web-proxy.oa.com</Address>
+      <Port>8080</Port>
+      <Options>2</Options>
+    </Proxy>
+  </ProxyList>
+  <ChainList />
+  <RuleList>
+    <Rule enabled="true">
+      <Name>Localhost</Name>
+      <Targets>localhost; 127.0.0.1; ::1; %ComputerName%; 0.0.0.0;</Targets>
+      <Action type="Direct" />
+    </Rule>
+    <Rule enabled="true">
+      <Name>oa.com</Name>
+      <Targets>*.oa.com</Targets>
+      <Action type="Direct" />
+    </Rule>
+    <Rule enabled="true">
+      <Name>tencent.com</Name>
+      <Targets>*.tencent.com</Targets>
+      <Action type="Direct" />
+    </Rule>
+    <Rule enabled="true">
+      <Name>qq.com</Name>
+      <Targets>capcha.qq.com</Targets>
+      <Action type="Direct" />
+    </Rule>
+    <Rule enabled="true">
+      <Name>isd.com</Name>
+      <Targets>*.isd.com</Targets>
+      <Action type="Direct" />
+    </Rule>
+    <Rule enabled="true">
+      <Name>webdev.com</Name>
+      <Targets>*.webdev.com</Targets>
+      <Action type="Direct" />
+    </Rule>
+    <Rule enabled="true">
+      <Name>gtimg.com</Name>
+      <Targets>*.gtimg.com</Targets>
+      <Action type="Direct" />
+    </Rule>
+    <Rule enabled="true">
+      <Name>ip</Name>
+      <Targets>10.0.0.0-10.255.255.255;</Targets>
+      <Action type="Direct" />
+    </Rule>
+    <Rule enabled="true">
+      <Name>微云</Name>
+      <Applications>wydrive.exe</Applications>
+      <Action type="Direct" />
+    </Rule>
+    <Rule enabled="true">
+      <Name>Default</Name>
+      <Action type="Proxy">100</Action>
+    </Rule>
+  </RuleList>
+</ProxifierProfile>
