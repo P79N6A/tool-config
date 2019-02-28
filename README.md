@@ -1,3 +1,3 @@
-# Tool Settings
+# tool-config
 
-This repository stores my settings for various tools and software.
+This repository stores my configurations for various tools and software. Not exactly dotfiles :)
