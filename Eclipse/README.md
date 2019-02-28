@@ -11,3 +11,7 @@ Extensions:
 
 Language Pack:
 - https://www.eclipse.org/babel/downloads.php
+
+Tip:
+- Increase the amount of memory Eclipse can use. See [How can I give eclipse more memory than 512M?
+](https://stackoverflow.com/questions/2610194/how-can-i-give-eclipse-more-memory-than-512m). This is not included in `eclipse.epf`
